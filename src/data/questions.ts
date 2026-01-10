@@ -102,42 +102,12 @@ export const questionsByWeek: { [week: string]: Question[] } = {
       ],
       answer: "property rights",
     },
-  ],  
+  ],
   week1: [
-    {
-      question: "In the word root for conservation, con stands for",
-      options: ["together", "to keep", "house", "manage"],
-      answer: "together",
-    },
-    {
-      question: "“The ability of a single economic actor (or small group of actors) to have a substantial influence on market prices” is known as",
-      options: ["price power", "market power", "externality", "economic power"],
-      answer: "market power",
-    },
-    {
-      question: "“An economy that allocates resources through the decentralised decisions of many firms and households as they interact in markets for goods and services” is a / an",
-      options: ["urban economy", "rural economy", "planned economy", "market economy"],
-      answer: "market economy",
-    },
     {
       question: "In the word root for conservation, servare stands for",
       options: ["together", "to keep", "house", "manage"],
       answer: "to keep",
-    },
-    {
-      question: "Which of these is true?",
-      options: [
-        "Wants are unlimited, resources are unlimited",
-        "Wants are limited, resources are limited",
-        "Wants are unlimited, resources are limited",
-        "Wants are limited, resources are unlimited"
-      ],
-      answer: "Wants are unlimited, resources are limited",
-    },
-    {
-      question: "“An increase in the overall level of prices in the economy” is",
-      options: ["inflation", "deflation", "stagflation", "priceflation"],
-      answer: "inflation",
     },
     {
       question: "Phillips curve shows the relation between",
@@ -150,19 +120,59 @@ export const questionsByWeek: { [week: string]: Question[] } = {
       answer: "inflation rate and unemployment rate",
     },
     {
-      question: "In the word root for Economics, oikos stands for",
-      options: ["together", "to keep", "house", "manage"],
-      answer: "house",
+      question: "“The ability of a single economic actor (or small group of actors) to have a substantial influence on market prices” is known as",
+      options: ["price power", "market power", "externality", "economic power"],
+      answer: "market power",
     },
     {
-      question: "Most of rational thinking occurs",
-      options: ["before the margin", "at the margin", "after the margin", "none of these"],
-      answer: "at the margin",
+      question: "“An increase in the overall level of prices in the economy” is",
+      options: ["inflation", "deflation", "stagflation", "priceflation"],
+      answer: "inflation",
+    },
+    {
+      question: "In the word root for conservation, con stands for",
+      options: ["together", "to keep", "house", "manage"],
+      answer: "together",
     },
     {
       question: "Input costs that do not require an outlay of money are",
       options: ["explicit costs", "implicit costs", "opportunity costs", "phantom costs"],
       answer: "implicit costs",
+    },
+    {
+      question: "In the word root for Economics, nemein stands for",
+      options: ["together", "to keep", "house", "manage"],
+      answer: "manage",
+    },
+    {
+      question: "The property of distributing economic prosperity uniformly among the members of society is a definition of",
+      options: [
+        "efficiency",
+        "equality",
+        "prudence",
+        "sustainability"
+      ],
+      answer: "equality",
+    },
+    {
+      question: "In the word root for Economics, oikos stands for",
+      options: [
+        "together",
+        "to keep",
+        "house",
+        "manage"
+      ],
+      answer: "house",
+    },
+    {
+      question: "“fluctuations in economic activity, such as employment and production” are referred to as",
+      options: [
+        "business cycles",
+        "economic cycles",
+        "production cycles",
+        "market cycles"
+      ],
+      answer: "business cycles",
     },
   ],
 
@@ -1029,7 +1039,7 @@ export const questionsByWeek: { [week: string]: Question[] } = {
       answer: "heuristics",
     },
   ],
-  
+
   week12: [
     {
       question: "As per Wildlife Protection Act 1972 (WPA 1972), wild life includes any animal, aquatic or land vegetation which forms part of any _____ .",
@@ -1132,6 +1142,6 @@ export const questionsByWeek: { [week: string]: Question[] } = {
       answer: "regulating service",
     },
   ],
-  
-  
+
+
 };
