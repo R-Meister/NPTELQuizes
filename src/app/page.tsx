@@ -1,26 +1,7 @@
-"use client";
-
-import React from "react";
-import { ArrowRight, BookOpen, Compass, Layers, Sparkles } from "lucide-react";
+import Image from "next/image";
+import { ArrowRight, Compass, Layers, Sparkles } from "lucide-react";
 import Link from "next/link";
 import "@/app/globals.css";
-import { Lightbulb, Sliders, TrendingUp } from "lucide-react";
-
-const FeatureCard = ({
-  icon: Icon,
-  title,
-  description,
-}: {
-  icon: React.ElementType;
-  title: string;
-  description: string;
-}) => (
-  <div className="bg-gray-900/60 p-6 border border-gray-700 rounded-xl shadow-sm transition-all duration-300 hover:bg-gray-800 hover:shadow-lg hover:shadow-green-600/30">
-    <Icon size={36} className="text-green-400 mb-4" />
-    <h2 className="text-xl font-semibold mb-2 text-white">{title}</h2>
-    <p className="text-gray-400 text-sm leading-relaxed">{description}</p>
-  </div>
-);
 
 export default function Home() {
   return (
@@ -54,6 +35,16 @@ export default function Home() {
 
           <div className="rounded-3xl border border-slate-800 bg-slate-950/80 p-8 flex flex-col justify-between">
             <h2 className="text-lg font-semibold text-slate-100 mb-5">How this is organized</h2>
+            <div className="mb-6 rounded-2xl border border-slate-800 bg-slate-900/70 p-4 flex justify-center">
+              <Image
+                src="/nptelimage.png"
+                alt="NPTEL"
+                width={120}
+                height={120}
+                className="h-24 w-24 md:h-28 md:w-28 object-contain"
+                priority
+              />
+            </div>
             <div className="space-y-4 text-sm text-slate-300">
               <div className="flex items-start gap-3">
                 <Compass size={18} className="text-emerald-400 mt-0.5" />
@@ -63,43 +54,9 @@ export default function Home() {
                 <Layers size={18} className="text-blue-400 mt-0.5" />
                 <p>Navigate by week or attempt all weeks in test mode.</p>
               </div>
-              <div className="flex items-start gap-3">
-                <BookOpen size={18} className="text-amber-400 mt-0.5" />
-                <p>Reuse the same flow for new courses as you add more content.</p>
-              </div>
             </div>
           </div>
         </header>
-
-        <section className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-14">
-          <FeatureCard
-            icon={Lightbulb}
-            title="Learn Smarter"
-            description="Focus on what matters most and skip the noise. Build confidence with every quiz."
-          />
-          <FeatureCard
-            icon={Sliders}
-            title="Adapts to You"
-            description="Questions adjust to your level. Strengthen weak spots and track real growth."
-          />
-          <FeatureCard
-            icon={TrendingUp}
-            title="Stay Motivated"
-            description="See your progress and unlock small wins that keep you moving forward."
-          />
-        </section>
-        <section className="rounded-2xl border border-slate-800 bg-gradient-to-r from-slate-900/90 via-slate-900/70 to-slate-900/40 p-6 md:p-8">
-          <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-4">
-            <div>
-              <h3 className="text-xl font-semibold">Current live course</h3>
-              <p className="text-slate-400 text-sm mt-1">Conservation Economics with week-wise quiz and practice support.</p>
-            </div>
-            <Link href="/course/conservation-economics" className="inline-flex items-center text-emerald-300 hover:text-emerald-200 transition-colors text-sm md:text-base">
-              Go to Conservation Economics
-              <ArrowRight className="ml-2" size={18} />
-            </Link>
-          </div>
-        </section>
       </div>
 
       <div className="absolute top-0 left-0 w-full h-full pointer-events-none overflow-hidden z-0">
