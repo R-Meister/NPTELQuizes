@@ -9,9 +9,6 @@ const CourseSelector = () => {
         <div className="mb-8">
           <p className="text-xs tracking-[0.18em] uppercase text-emerald-300/80">Course Catalog</p>
           <h1 className="text-3xl md:text-4xl font-bold text-white mt-2">Select a Course</h1>
-          <p className="text-slate-400 mt-3 max-w-2xl">
-            This setup is ready for multiple courses. Add a new course config and it will appear here.
-          </p>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-5">

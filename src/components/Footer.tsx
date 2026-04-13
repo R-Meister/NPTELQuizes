@@ -21,10 +21,10 @@ const Footer = () => {
           href="https://www.linkedin.com/in/rmnm/"
           target="_blank"
           rel="noopener noreferrer"
-          className="text-[11px] text-gray-600 hover:text-gray-500 transition-colors"
+          className="text-sm md:text-base font-semibold text-emerald-300 hover:text-emerald-200 transition-colors"
           aria-label="Add me on LinkedIn"
         >
-          add me on linkedin
+          Add me on LinkedIn
         </Link>
       </div>
     </footer>
