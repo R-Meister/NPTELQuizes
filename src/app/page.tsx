@@ -5,9 +5,9 @@ import "@/app/globals.css";
 
 export default function Home() {
   return (
-    <div className="min-h-screen text-white px-6 py-10 md:py-14 relative overflow-hidden">
+    <div className="text-white px-4 md:px-6 py-5 md:py-6 relative overflow-hidden">
       <div className="max-w-6xl mx-auto w-full z-10 relative">
-        <header className="mb-12 md:mb-16 grid md:grid-cols-[1.3fr_0.9fr] gap-6 items-stretch">
+        <header className="grid md:grid-cols-[1.3fr_0.9fr] gap-5 items-stretch">
           <div className="rounded-3xl border border-emerald-900/60 bg-gradient-to-br from-emerald-950/70 via-slate-950/80 to-slate-950/90 p-8 md:p-10 shadow-[0_25px_80px_-40px_rgba(16,185,129,0.7)]">
             <p className="inline-flex items-center gap-2 text-xs tracking-[0.18em] uppercase text-emerald-300/80 mb-5">
               <Sparkles size={14} />
@@ -33,24 +33,24 @@ export default function Home() {
             </div>
           </div>
 
-          <div className="rounded-3xl border border-slate-800 bg-slate-950/80 p-8 flex flex-col justify-between">
-            <h2 className="text-lg font-semibold text-slate-100 mb-5">How this is organized</h2>
-            <div className="mb-6 rounded-2xl border border-slate-800 bg-slate-900/70 p-4 flex justify-center">
+          <div className="rounded-3xl border border-slate-700/80 bg-gradient-to-b from-slate-900/90 to-slate-950/85 p-6 md:p-7 flex flex-col gap-5 shadow-[0_20px_60px_-40px_rgba(14,116,144,0.8)]">
+            <h2 className="text-base tracking-[0.08em] uppercase text-slate-200/90">How this is organized</h2>
+            <div className="rounded-2xl border border-slate-800/90 bg-black/25 flex justify-center overflow-hidden">
               <Image
                 src="/nptelimage.png"
                 alt="NPTEL"
-                width={120}
-                height={120}
-                className="h-24 w-24 md:h-28 md:w-28 object-contain"
+                width={240}
+                height={240}
+                className="w-full h-auto object-contain"
                 priority
               />
             </div>
-            <div className="space-y-4 text-sm text-slate-300">
-              <div className="flex items-start gap-3">
+            <div className="space-y-3 text-sm text-slate-300">
+              <div className="flex items-start gap-3 rounded-xl border border-slate-800/70 bg-slate-900/40 px-3 py-3">
                 <Compass size={18} className="text-emerald-400 mt-0.5" />
                 <p>Pick a course first, then choose practice or test mode.</p>
               </div>
-              <div className="flex items-start gap-3">
+              <div className="flex items-start gap-3 rounded-xl border border-slate-800/70 bg-slate-900/40 px-3 py-3">
                 <Layers size={18} className="text-blue-400 mt-0.5" />
                 <p>Navigate by week or attempt all weeks in test mode.</p>
               </div>
