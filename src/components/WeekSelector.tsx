@@ -4,20 +4,21 @@ import Link from "next/link";
 
 interface WeekSelectorProps {
   weeks: string[];
-  basePath: string; // either "/quiz" or "/practice"
+  basePath: string;
+  backPath?: string;
+  title?: string;
 }
 
-const WeekSelector: React.FC<WeekSelectorProps> = ({ weeks, basePath }) => {
+const WeekSelector: React.FC<WeekSelectorProps> = ({ weeks, basePath, backPath = "/", title }) => {
   const visibleWeeks = weeks.filter((w) => w !== "week69");
+  const resolvedTitle = title ?? `Select a Week to ${basePath.includes("/quiz") ? "Take Test" : "Practice"}`;
 
   return (
     <div className="text-gray-300 py-12 px-4 sm:px-6 lg:px-8 font-mono">
       <div className="max-w-3xl mx-auto">
         <div className="flex justify-between items-center mb-8">
-          <h1 className="text-2xl font-bold text-white">
-            Select a Week to {basePath === "/quiz" ? "Take Test" : "Practice"}
-          </h1>
-          <Link href="/" className="text-gray-300 hover:text-white">
+          <h1 className="text-2xl font-bold text-white">{resolvedTitle}</h1>
+          <Link href={backPath} className="text-gray-300 hover:text-white">
             <Home size={24} />
           </Link>
         </div>
@@ -38,7 +39,7 @@ const WeekSelector: React.FC<WeekSelectorProps> = ({ weeks, basePath }) => {
           ))}
 
           {/* "All Weeks" link only in practice mode or quiz mode if desired */}
-          {basePath === "/quiz" && (
+          {basePath.includes("/quiz") && (
             <Link
               href={`${basePath}/all`}
               className="bg-blue-600 text-white p-4 hover:bg-blue-700 transition-colors duration-300 flex items-center justify-between"
