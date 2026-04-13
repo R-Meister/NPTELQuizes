@@ -77,13 +77,6 @@ export default function Home() {
 
         </section>
 
-
-
-        {/* Description */}
-        <p className="text-sm text-gray-500 leading-relaxed text-center ">
-          Master the NPTEL Conservation Economics course and ace your FAT exam with our
-          specialized quiz application designed for serious learners.
-        </p>
       </div>
 
       {/* Background Effects */}
