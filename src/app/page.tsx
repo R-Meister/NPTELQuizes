@@ -1,9 +1,8 @@
 "use client";
 
 import React from "react";
-import { ArrowRight } from "lucide-react";
+import { ArrowRight, BookOpen, Compass, Layers, Sparkles } from "lucide-react";
 import Link from "next/link";
-import Footer from "@/components/Footer";
 import "@/app/globals.css";
 import { Lightbulb, Sliders, TrendingUp } from "lucide-react";
 
@@ -25,21 +24,54 @@ const FeatureCard = ({
 
 export default function Home() {
   return (
-    <div className="min-h-screen bg-black text-white flex flex-col justify-center items-center px-6 py-10 font-sans relative overflow-hidden">
-      <div className="max-w-5xl w-full z-10">
-        {/* Header */}
-        <header className="mb-16 flex flex-col items-center justify-center">
-          <div className="text-center">
-            <h1 className="text-5xl md:text-6xl font-extrabold mb-3 tracking-tight">NPTEL</h1>
-            <h2 className="text-xl md:text-2xl font-light text-gray-300">
-              Conservation Economics Quiz App
-            </h2>
+    <div className="min-h-screen text-white px-6 py-10 md:py-14 relative overflow-hidden">
+      <div className="max-w-6xl mx-auto w-full z-10 relative">
+        <header className="mb-12 md:mb-16 grid md:grid-cols-[1.3fr_0.9fr] gap-6 items-stretch">
+          <div className="rounded-3xl border border-emerald-900/60 bg-gradient-to-br from-emerald-950/70 via-slate-950/80 to-slate-950/90 p-8 md:p-10 shadow-[0_25px_80px_-40px_rgba(16,185,129,0.7)]">
+            <p className="inline-flex items-center gap-2 text-xs tracking-[0.18em] uppercase text-emerald-300/80 mb-5">
+              <Sparkles size={14} />
+              NPTEL Quiz Suite
+            </p>
+            <h1 className="text-4xl md:text-6xl font-extrabold leading-tight tracking-tight mb-4">
+              Learn fast.
+              <br />
+              Revise with structure.
+            </h1>
+            <p className="text-slate-300 text-base md:text-lg max-w-2xl leading-relaxed mb-8">
+              A clean and focused preparation platform for NPTEL courses. Start with Conservation Economics and scale to multiple courses as you add them.
+            </p>
+            <div className="flex flex-wrap gap-3">
+              <Link href="/course" className="inline-flex items-center bg-emerald-500 text-black font-semibold py-3 px-6 rounded-full hover:bg-emerald-400 transition-colors">
+                Select Course
+                <ArrowRight className="ml-2" size={18} />
+              </Link>
+              <Link href="/course/conservation-economics" className="inline-flex items-center bg-slate-800/90 border border-slate-700 text-slate-100 font-semibold py-3 px-6 rounded-full hover:bg-slate-700 transition-colors">
+                Open Course Hub
+                <ArrowRight className="ml-2" size={18} />
+              </Link>
+            </div>
+          </div>
+
+          <div className="rounded-3xl border border-slate-800 bg-slate-950/80 p-8 flex flex-col justify-between">
+            <h2 className="text-lg font-semibold text-slate-100 mb-5">How this is organized</h2>
+            <div className="space-y-4 text-sm text-slate-300">
+              <div className="flex items-start gap-3">
+                <Compass size={18} className="text-emerald-400 mt-0.5" />
+                <p>Pick a course first, then choose practice or test mode.</p>
+              </div>
+              <div className="flex items-start gap-3">
+                <Layers size={18} className="text-blue-400 mt-0.5" />
+                <p>Navigate by week or attempt all weeks in test mode.</p>
+              </div>
+              <div className="flex items-start gap-3">
+                <BookOpen size={18} className="text-amber-400 mt-0.5" />
+                <p>Reuse the same flow for new courses as you add more content.</p>
+              </div>
+            </div>
           </div>
         </header>
 
-
-        {/* Features */}
-        <section className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-16">
+        <section className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-14">
           <FeatureCard
             icon={Lightbulb}
             title="Learn Smarter"
@@ -56,38 +88,25 @@ export default function Home() {
             description="See your progress and unlock small wins that keep you moving forward."
           />
         </section>
-
-
-
-
-        {/* CTA */}
-        <section className="flex flex-col md:flex-row justify-between items-center gap-10 mb-12">
-          {/* Modes Group */}
-          <div className="flex flex-col md:flex-row gap-6 md:gap-8 md:justify-start w-full">
-            <Link href="/quiz" className="inline-flex items-center bg-green-600 text-white font-semibold py-4 px-10 text-lg rounded-full shadow-lg hover:bg-green-700 transition-all group transform hover:scale-105">
-              Test Mode
-              <ArrowRight className="ml-3 transition-transform transform group-hover:translate-x-1" size={20} />
-            </Link>
-
-            <Link href="/practice" className="inline-flex items-center bg-blue-600 text-white font-semibold py-4 px-10 text-lg rounded-full shadow-lg hover:bg-blue-700 transition-all group transform hover:scale-105">
-              Practice Mode
-              <ArrowRight className="ml-3 transition-transform transform group-hover:translate-x-1" size={20} />
+        <section className="rounded-2xl border border-slate-800 bg-gradient-to-r from-slate-900/90 via-slate-900/70 to-slate-900/40 p-6 md:p-8">
+          <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-4">
+            <div>
+              <h3 className="text-xl font-semibold">Current live course</h3>
+              <p className="text-slate-400 text-sm mt-1">Conservation Economics with week-wise quiz and practice support.</p>
+            </div>
+            <Link href="/course/conservation-economics" className="inline-flex items-center text-emerald-300 hover:text-emerald-200 transition-colors text-sm md:text-base">
+              Go to Conservation Economics
+              <ArrowRight className="ml-2" size={18} />
             </Link>
           </div>
-
         </section>
-
       </div>
 
-      {/* Background Effects */}
       <div className="absolute top-0 left-0 w-full h-full pointer-events-none overflow-hidden z-0">
-        <div className="absolute top-0 left-0 w-full h-full bg-black"></div>
-        <div className="absolute -left-64 -top-64 w-128 h-128 bg-green-500 rounded-full mix-blend-multiply filter blur-3xl opacity-10 animate-blob"></div>
-        <div className="absolute -right-64 -bottom-64 w-128 h-128 bg-blue-500 rounded-full mix-blend-multiply filter blur-3xl opacity-10 animate-blob animation-delay-2000"></div>
+        <div className="absolute top-0 left-0 w-full h-full bg-slate-950" />
+        <div className="absolute -left-48 -top-48 w-96 h-96 bg-emerald-500 rounded-full blur-3xl opacity-10 animate-blob" />
+        <div className="absolute -right-48 bottom-0 w-96 h-96 bg-cyan-500 rounded-full blur-3xl opacity-10 animate-blob animation-delay-2000" />
       </div>
-
-      {/* Footer */}
-      <Footer />
     </div>
   );
 }
