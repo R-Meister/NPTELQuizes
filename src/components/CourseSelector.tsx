@@ -1,6 +1,18 @@
+"use client";
+
 import Link from "next/link";
 import { ArrowRight, BookOpen, Clock3 } from "lucide-react";
 import { courses } from "@/data/courses";
+
+const LAST_SELECTED_COURSE_KEY = "nptel:last-selected-course";
+
+const handleCourseSelect = (slug: string) => {
+  try {
+    localStorage.setItem(LAST_SELECTED_COURSE_KEY, slug);
+  } catch {
+    // no-op for locked storage environments
+  }
+};
 
 const CourseSelector = () => {
   return (
@@ -44,6 +56,7 @@ const CourseSelector = () => {
                 {isLive ? (
                   <Link
                     href={`/course/${course.slug}`}
+                    onClick={() => handleCourseSelect(course.slug)}
                     className="inline-flex items-center text-emerald-300 hover:text-emerald-200 transition-colors"
                   >
                     Open Course

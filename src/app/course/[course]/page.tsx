@@ -2,6 +2,7 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import { ArrowRight, BookOpenCheck, PenSquare } from "lucide-react";
 import { getCourseBySlug } from "@/data/courses";
+import CourseSelectionTracker from "@/components/CourseSelectionTracker";
 
 export default function CourseLandingPage({ params }: { params: { course: string } }) {
   const course = getCourseBySlug(params.course);
@@ -15,6 +16,7 @@ export default function CourseLandingPage({ params }: { params: { course: string
   return (
     <div className="min-h-screen bg-slate-950 px-4 sm:px-6 lg:px-8 py-12 text-slate-100">
       <div className="max-w-5xl mx-auto">
+        <CourseSelectionTracker slug={course.slug} />
         <div className="mb-10">
           <p className="text-xs tracking-[0.18em] uppercase text-emerald-300/80">Course Hub</p>
           <h1 className="text-3xl md:text-4xl font-bold mt-2">{course.title}</h1>

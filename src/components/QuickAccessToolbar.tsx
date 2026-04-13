@@ -3,14 +3,11 @@
 import Link from "next/link";
 import { useMemo } from "react";
 import { usePathname } from "next/navigation";
-import { Home, Layers, BookOpenCheck, PenSquare } from "lucide-react";
+import { Home, Layers } from "lucide-react";
 
 const navItems = [
   { href: "/", label: "Home", icon: Home },
   { href: "/course", label: "Courses", icon: Layers },
-  { href: "/course/conservation-economics", label: "Course Hub", icon: Layers },
-  { href: "/course/conservation-economics/quiz", label: "Quiz", icon: BookOpenCheck },
-  { href: "/course/conservation-economics/practice", label: "Practice", icon: PenSquare },
 ];
 
 const QuickAccessToolbar = () => {
