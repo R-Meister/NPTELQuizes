@@ -4,7 +4,7 @@ import { useState } from "react";
 import Link from "next/link";
 import { Mail, Clipboard, ExternalLink, X } from "lucide-react";
 
-const CONTACT_EMAIL = "contact@rmnm.in";
+const CONTACT_EMAIL = "raman@rmnm.in";
 
 const ContactPopup = () => {
   const [open, setOpen] = useState(false);
@@ -24,19 +24,19 @@ const ContactPopup = () => {
     <div className="fixed bottom-5 right-5 z-50">
       <button
         onClick={() => setOpen((prev) => !prev)}
-        className="h-14 w-14 rounded-full bg-emerald-500 text-black shadow-[0_18px_35px_-15px_rgba(16,185,129,0.9)] font-semibold hover:bg-emerald-400 transition-colors"
+        className="h-14 w-14 rounded-full border border-emerald-400/40 bg-gradient-to-br from-emerald-400 to-emerald-500 text-black shadow-[0_16px_32px_-14px_rgba(16,185,129,0.8)] hover:from-emerald-300 hover:to-emerald-400 transition-all"
         aria-label="Open contact options"
       >
         <Mail size={20} className="mx-auto" />
       </button>
 
       {open && (
-        <div className="mt-3 w-[320px] max-w-[90vw] rounded-2xl border border-slate-800 bg-[#050607] p-5 shadow-2xl">
+        <div className="mt-3 w-[340px] max-w-[90vw] rounded-2xl border border-slate-700/80 bg-gradient-to-b from-[#0a0d10] to-[#050607] p-5 shadow-[0_28px_70px_-30px_rgba(0,0,0,0.95)]">
           <div className="flex items-center justify-between mb-4">
-            <h2 className="text-white text-lg font-semibold">Contact Me</h2>
+            <h2 className="text-white text-lg font-semibold tracking-tight">Contact Me</h2>
             <button
               onClick={() => setOpen(false)}
-              className="text-slate-400 hover:text-white transition-colors"
+              className="text-slate-500 hover:text-white transition-colors"
               aria-label="Close contact popup"
             >
               <X size={18} />
@@ -44,7 +44,7 @@ const ContactPopup = () => {
           </div>
 
           <p className="text-slate-300 text-sm mb-2">Email directly</p>
-          <div className="rounded-xl border border-slate-800 bg-slate-900/80 px-4 py-3 text-slate-200 text-base mb-4">
+          <div className="rounded-xl border border-slate-700 bg-slate-900/70 px-4 py-3 text-slate-100 text-[17px] mb-4 tracking-wide">
             {CONTACT_EMAIL}
           </div>
 
