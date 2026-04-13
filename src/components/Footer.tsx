@@ -7,9 +7,9 @@ const Footer = () => {
     <footer className="w-full bg-black text-gray-400 border-t border-gray-800">
       <div className="max-w-6xl mx-auto px-4 py-6 flex flex-col items-center justify-center gap-4 text-center">
         <div className="flex items-center gap-2">
-          <span>Big thanks to the original contributors</span>
+          <span>View source on GitHub</span>
           <Link
-            href="https://github.com/HackerrArnav/Conversation_Economics_Quiz_App"
+            href="https://github.com"
             target="_blank"
             rel="noopener noreferrer"
             className="text-white hover:text-gray-300 transition-colors"

@@ -1,7 +1,7 @@
 "use client";
 
 import React from "react";
-import { ArrowRight, Linkedin } from "lucide-react";
+import { ArrowRight } from "lucide-react";
 import Link from "next/link";
 import Footer from "@/components/Footer";
 import "@/app/globals.css";
@@ -60,7 +60,7 @@ export default function Home() {
 
 
 
-        {/* CTA + External Link */}
+        {/* CTA */}
         <section className="flex flex-col md:flex-row justify-between items-center gap-10 mb-12">
           {/* Modes Group */}
           <div className="flex flex-col md:flex-row gap-6 md:gap-8 md:justify-start w-full">
@@ -75,24 +75,7 @@ export default function Home() {
             </Link>
           </div>
 
-          {/* LinkedIn Link for desktop */}
-          <div className="hidden md:flex justify-end w-full">
-            <a href="https://www.linkedin.com/in/arnav-borse-37a003255/" target="_blank" rel="noopener noreferrer"
-              className="inline-flex items-center text-gray-300 hover:text-blue-400 transition-colors duration-300">
-              <Linkedin className="mr-2" size={24} />
-              Connect on LinkedIn
-            </a>
-          </div>
         </section>
-
-        {/* LinkedIn Link for mobile */}
-        <div className="flex md:hidden justify-center mb-8">
-          <a href="https://www.linkedin.com/in/arnav-borse-37a003255/" target="_blank" rel="noopener noreferrer"
-            className="inline-flex items-center text-gray-300 hover:text-blue-400 transition-colors duration-300">
-            <Linkedin className="mr-2" size={24} />
-            Connect on LinkedIn
-          </a>
-        </div>
 
 
 
