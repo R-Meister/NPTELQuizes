@@ -105,104 +105,104 @@ week0: [
 ],
 week1: [
   {
-    question: "Which of these is true?",
+    question: "In the word root for conservation, servare stands for",
     options: [
-      "Wants are unlimited, resources are unlimited",
-      "Wants are limited, resources are limited",
-      "Wants are unlimited, resources are limited",
-      "Wants are limited, resources are unlimited"
+      "together",
+      "to keep",
+      "house",
+      "manage"
     ],
-    answer: "Wants are unlimited, resources are limited",
+    answer: "to keep",
   },
   {
-    question: "The property of society getting the most it can from its scarce resources is a definition of",
+    question: "Phillips curve shows the relation between",
+    options: [
+      "profit and loss",
+      "marked price and selling price",
+      "inflation rate and unemployment rate",
+      "electricity consumption and heat output"
+    ],
+    answer: "inflation rate and unemployment rate",
+  },
+  {
+    question: "“the ability of a single economic actor (or small group of actors) to have a substantial influence on market prices” is known as",
+    options: [
+      "price power",
+      "market power",
+      "externality",
+      "economic power"
+    ],
+    answer: "market power",
+  },
+  {
+    question: "“an increase in the overall level of prices in the economy” is",
+    options: [
+      "inflation",
+      "deflation",
+      "stagflation",
+      "priceflation"
+    ],
+    answer: "inflation",
+  },
+  {
+    question: "In the word root for conservation, con stands for",
+    options: [
+      "together",
+      "to keep",
+      "house",
+      "manage"
+    ],
+    answer: "together",
+  },
+  {
+    question: "Input costs that do not require an outlay of money are",
+    options: [
+      "explicit costs",
+      "implicit costs",
+      "opportunity costs",
+      "phantom costs"
+    ],
+    answer: "implicit costs",
+  },
+  {
+    question: "In the word root for Economics, nemein stands for",
+    options: [
+      "together",
+      "to keep",
+      "house",
+      "manage"
+    ],
+    answer: "manage",
+  },
+  {
+    question: "The property of distributing economic prosperity uniformly among the members of society is a definition of",
     options: [
       "efficiency",
       "equality",
       "prudence",
       "sustainability"
     ],
-    answer: "efficiency",
+    answer: "equality",
   },
   {
-    question: "“something that induces a person to act” is a definition of",
+    question: "In the word root for Economics, oikos stands for",
     options: [
-      "enticement",
-      "attraction",
-      "incentive",
-      "occupation"
+      "together",
+      "to keep",
+      "house",
+      "manage"
     ],
-    answer: "incentive",
+    answer: "house",
   },
   {
-    question: "Input costs that require an outlay of money are",
+    question: "“fluctuations in economic activity, such as employment and production” are referred to as",
     options: [
-      "explicit costs",
-      "implicit costs",
-      "opportunity costs",
-      "phantom costs"
+      "business cycles",
+      "economic cycles",
+      "production cycles",
+      "market cycles"
     ],
-    answer: "explicit costs",
-  },
-  {
-    question: "“the ability of an individual to own and exercise control over scarce resources” is known as",
-    options: [
-      "property rights",
-      "resource rights",
-      "individual rights",
-      "social rights"
-    ],
-    answer: "property rights",
-  },
-  {
-    question: "Whatever must be given up to obtain some item is a definition of",
-    options: [
-      "explicit costs",
-      "implicit costs",
-      "opportunity costs",
-      "phantom costs"
-    ],
-    answer: "opportunity costs",
-  },
-  {
-    question: "Most of rational thinking occurs",
-    options: [
-      "before the margin",
-      "at the margin",
-      "after the margin",
-      "none of these"
-    ],
-    answer: "at the margin",
-  },
-  {
-    question: "Rational decision making compares",
-    options: [
-      "average benefits to average costs",
-      "average benefits to marginal costs",
-      "marginal benefits to average costs",
-      "marginal benefits to marginal costs"
-    ],
-    answer: "marginal benefits to marginal costs",
-  },
-  {
-    question: "“an economy that allocates resources through the decentralised decisions of many firms and households as they interact in markets for goods and services” is a / an",
-    options: [
-      "urban economy",
-      "rural economy",
-      "planned economy",
-      "market economy"
-    ],
-    answer: "market economy",
-  },
-  {
-    question: "“the ability to produce a good at a lower opportunity cost than another producer” is a definition of",
-    options: [
-      "real advantage",
-      "monetary advantage",
-      "comparative advantage",
-      "opportunity advantage"
-    ],
-    answer: "comparative advantage",
+    answer: "business cycles",
   },
 ],
 week2: [
