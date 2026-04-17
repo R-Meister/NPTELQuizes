@@ -25,14 +25,14 @@ export const courses: CourseConfig[] = [
     slug: "forests-and-their-management",
     title: "Forests and Their Management",
     subtitle: "Week-wise prep for NPTEL quizzes and exams",
-    status: "live",
+    status: "coming-soon",
     questionsByWeek: forestsAndTheirManagementQuestionsByWeek,
   },
   {
     slug: "introduction-to-liberal-arts",
     title: "Introduction to Liberal Arts",
     subtitle: "Week-wise prep for NPTEL quizzes and exams",
-    status: "live",
+    status: "coming-soon",
     questionsByWeek: introductionToLiberalArtsQuestionsByWeek,
   },
 ];
