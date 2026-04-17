@@ -84,10 +84,8 @@ export const questionsByWeek: {{ [week: string]: Question[] }} = {{
 
 
 # 🔥 RUN
-pdf_path = "your_file.pdf"
-
+pdf_path = "extraction/data/conservation_economics/Week 1_Solution.pdf"
 questions = parse_pdf(pdf_path)
-
 js_output = export_to_js(questions, "week1")
 
 # Save file
