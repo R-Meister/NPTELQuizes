@@ -26,15 +26,18 @@ export default function CourseLandingPage({ params }: { params: { course: string
         <div className="grid grid-cols-1 md:grid-cols-2 gap-5 mb-8">
           <Link
             href={`/course/${course.slug}/quiz`}
-            className="rounded-2xl border border-slate-800 bg-slate-900/70 p-6 hover:bg-slate-800/80 transition-colors"
+            className="rounded-2xl border border-emerald-300/40 bg-gradient-to-br from-emerald-500 to-teal-600 p-7 hover:from-emerald-400 hover:to-teal-500 transition-all"
           >
-            <div className="flex items-center gap-2 text-emerald-300 mb-3">
+            <div className="flex items-center gap-2 text-white/90 mb-3">
               <BookOpenCheck size={18} />
-              <span className="text-sm">Test Mode</span>
+              <span className="text-sm font-semibold tracking-wide uppercase">Test Mode</span>
             </div>
-            <h2 className="text-xl font-semibold">Take Timed-Style Quiz</h2>
-            <p className="text-slate-400 text-sm mt-2">Attempt a week-specific test or all weeks together.</p>
-            <span className="inline-flex items-center mt-5 text-emerald-300 text-sm">
+            <h2 className="text-3xl font-extrabold text-white leading-tight">Take Timed-Style Quiz</h2>
+            <p className="text-white/95 text-base mt-3 font-medium">
+              Answers are shown only after you submit the full test.
+            </p>
+            <p className="text-white/85 text-sm mt-2">Attempt a week-specific test or all weeks together.</p>
+            <span className="inline-flex items-center mt-6 text-white text-sm font-semibold">
               Open Quiz
               <ArrowRight size={16} className="ml-2" />
             </span>
@@ -42,15 +45,18 @@ export default function CourseLandingPage({ params }: { params: { course: string
 
           <Link
             href={`/course/${course.slug}/practice`}
-            className="rounded-2xl border border-slate-800 bg-slate-900/70 p-6 hover:bg-slate-800/80 transition-colors"
+            className="rounded-2xl border border-blue-300/40 bg-gradient-to-br from-blue-500 to-cyan-600 p-7 hover:from-blue-400 hover:to-cyan-500 transition-all"
           >
-            <div className="flex items-center gap-2 text-blue-300 mb-3">
+            <div className="flex items-center gap-2 text-white/90 mb-3">
               <PenSquare size={18} />
-              <span className="text-sm">Practice Mode</span>
+              <span className="text-sm font-semibold tracking-wide uppercase">Practice Mode</span>
             </div>
-            <h2 className="text-xl font-semibold">Practice by Week</h2>
-            <p className="text-slate-400 text-sm mt-2">Immediate feedback with week-by-week navigation.</p>
-            <span className="inline-flex items-center mt-5 text-blue-300 text-sm">
+            <h2 className="text-3xl font-extrabold text-white leading-tight">Practice by Week</h2>
+            <p className="text-white/95 text-base mt-3 font-medium">
+              Feedback appears immediately after every answer click.
+            </p>
+            <p className="text-white/85 text-sm mt-2">Train topic-by-topic with week-by-week navigation.</p>
+            <span className="inline-flex items-center mt-6 text-white text-sm font-semibold">
               Open Practice
               <ArrowRight size={16} className="ml-2" />
             </span>
