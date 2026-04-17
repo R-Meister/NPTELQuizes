@@ -19,10 +19,10 @@ const geistMono = localFont({
 });
 
 export const metadata: Metadata = {
-  title: "Conservation Economics NPTEL",
-  description: "Get ready to Top your Exam",
+  title: "NPTEL Practice",
+  description: "Practice and test prep for NPTEL courses",
   icons: {
-    icon: "/nptelimage.png", // ✅ This is the key line
+    icon: "/icon.svg",
   },
 };
 
