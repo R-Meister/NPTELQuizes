@@ -1,6 +1,6 @@
 import { Question } from "@/types/Question";
 
-export const questionsByWeek: { [week: string]: Question[] } = {
+export const conservationEconomicsQuestionsByWeek: { [week: string]: Question[] } = {
 week0: [
   {
     question: "Which of these is true?",
@@ -1327,4 +1327,98 @@ week12: [
     answer: "supporting service",
   },
 ],
+};
+
+export const forestsAndTheirManagementQuestionsByWeek: { [week: string]: Question[] } = {
+  week0: [
+    {
+      question: "Which of these best defines silviculture?",
+      options: [
+        "The science and art of establishing, growing, and tending forests",
+        "The study of marine fish populations",
+        "A method for classifying soil minerals only",
+        "The legal process of land surveying"
+      ],
+      answer: "The science and art of establishing, growing, and tending forests",
+    },
+    {
+      question: "Joint Forest Management in India mainly encourages",
+      options: [
+        "community participation in forest protection",
+        "private ownership of all forest land",
+        "complete ban on non-timber forest products",
+        "only industrial harvesting"
+      ],
+      answer: "community participation in forest protection",
+    },
+  ],
+  week1: [
+    {
+      question: "Which forest type is commonly associated with high rainfall in the Western Ghats?",
+      options: [
+        "Tropical evergreen forest",
+        "Tropical thorn forest",
+        "Temperate coniferous forest",
+        "Alpine scrub"
+      ],
+      answer: "Tropical evergreen forest",
+    },
+    {
+      question: "A working plan in forestry is primarily used for",
+      options: [
+        "scientific management of forest operations over time",
+        "daily weather forecasting",
+        "urban traffic control",
+        "mining lease approvals"
+      ],
+      answer: "scientific management of forest operations over time",
+    },
+  ],
+};
+
+export const introductionToLiberalArtsQuestionsByWeek: { [week: string]: Question[] } = {
+  week0: [
+    {
+      question: "The liberal arts tradition most strongly emphasizes",
+      options: [
+        "interdisciplinary learning and critical thinking",
+        "training for one narrow technical role only",
+        "memorizing facts without interpretation",
+        "avoiding ethical discussions"
+      ],
+      answer: "interdisciplinary learning and critical thinking",
+    },
+    {
+      question: "Which of these is commonly included in liberal arts education?",
+      options: [
+        "humanities, social sciences, and natural sciences",
+        "only mechanical workshop practice",
+        "only corporate law modules",
+        "only exam strategy sessions"
+      ],
+      answer: "humanities, social sciences, and natural sciences",
+    },
+  ],
+  week1: [
+    {
+      question: "In a liberal arts classroom, argumentation usually requires",
+      options: [
+        "evidence, reasoning, and clear communication",
+        "authority without justification",
+        "personal opinion alone",
+        "ignoring counterarguments"
+      ],
+      answer: "evidence, reasoning, and clear communication",
+    },
+    {
+      question: "A key outcome of liberal arts learning is",
+      options: [
+        "the ability to connect ideas across disciplines",
+        "complete specialization from day one",
+        "removal of creativity from analysis",
+        "replacing inquiry with rote learning"
+      ],
+      answer: "the ability to connect ideas across disciplines",
+    },
+  ],
 };
