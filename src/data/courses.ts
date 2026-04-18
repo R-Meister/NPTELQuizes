@@ -1,7 +1,6 @@
 import {
   conservationEconomicsQuestionsByWeek,
   forestsAndTheirManagementQuestionsByWeek,
-  introductionToLiberalArtsQuestionsByWeek,
 } from "@/data/questions";
 import { Question } from "@/types/Question";
 
@@ -33,7 +32,7 @@ export const courses: CourseConfig[] = [
     title: "Introduction to Liberal Arts",
     subtitle: "Week-wise prep for NPTEL quizzes and exams",
     status: "coming-soon",
-    questionsByWeek: introductionToLiberalArtsQuestionsByWeek,
+    questionsByWeek: {},
   },
 ];
 
