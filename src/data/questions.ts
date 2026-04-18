@@ -478,7 +478,7 @@ week4: [
       "jump dispersal",
       "drifting"
     ],
-    answer: "secular dispersal",
+    answer: "diffusion",
   },
   {
     question: "The acronym HIPPO does not include",
