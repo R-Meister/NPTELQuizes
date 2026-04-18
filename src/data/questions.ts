@@ -1374,6 +1374,17 @@ export const forestsAndTheirManagementQuestionsByWeek: { [week: string]: Questio
       answer: "scientific management of forest operations over time",
     },
   ],
+  week2: [],
+  week3: [],
+  week4: [],
+  week5: [],
+  week6: [],
+  week7: [],
+  week8: [],
+  week9: [],
+  week10: [],
+  week11: [],
+  week12: [],
 };
 
 export const introductionToLiberalArtsQuestionsByWeek: { [week: string]: Question[] } = {

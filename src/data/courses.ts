@@ -25,7 +25,7 @@ export const courses: CourseConfig[] = [
     slug: "forests-and-their-management",
     title: "Forests and Their Management",
     subtitle: "Week-wise prep for NPTEL quizzes and exams",
-    status: "coming-soon",
+    status: "live",
     questionsByWeek: forestsAndTheirManagementQuestionsByWeek,
   },
   {

@@ -158,6 +158,22 @@ export default function CourseQuizPage({ params }: { params: { course: string; w
                   </button>
                 ))}
               </div>
+              {quizCompleted && (
+                <div className="mt-3 text-sm">
+                  {!userAnswers[index] ? (
+                    <div className="text-amber-400">
+                      Not answered. Correct answer: <span className="text-green-400">{question.answer}</span>
+                    </div>
+                  ) : userAnswers[index] === question.answer ? (
+                    <div className="text-green-400">Your answer is correct.</div>
+                  ) : (
+                    <div className="text-red-400">
+                      Your answer: <span className="text-red-300">{userAnswers[index]}</span> | Correct answer:{" "}
+                      <span className="text-green-400">{question.answer}</span>
+                    </div>
+                  )}
+                </div>
+              )}
             </div>
           </div>
         ))}
