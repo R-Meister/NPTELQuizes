@@ -21,8 +21,8 @@ export default function Home() {
               A clean and focused preparation platform for NPTEL courses.
             </p>
             <div className="flex flex-wrap gap-3">
-              <Link href="/course/conservation-economics" className="inline-flex items-center bg-slate-800/90 border border-slate-700 text-slate-100 font-semibold py-3 px-6 rounded-full hover:bg-slate-700 transition-colors">
-                Open Course Hub
+              <Link href="/course" className="inline-flex items-center bg-slate-800/90 border border-slate-700 text-slate-100 font-semibold py-3 px-6 rounded-full hover:bg-slate-700 transition-colors">
+                Open Courses
                 <ArrowRight className="ml-2" size={18} />
               </Link>
             </div>

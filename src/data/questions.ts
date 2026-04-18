@@ -1330,106 +1330,106 @@ week12: [
 };
 
 export const forestsAndTheirManagementQuestionsByWeek: { [week: string]: Question[] } = {
-  week0: [
-    {
-      question: "Which of these best defines silviculture?",
-      options: [
-        "The science and art of establishing, growing, and tending forests",
-        "The study of marine fish populations",
-        "A method for classifying soil minerals only",
-        "The legal process of land surveying"
-      ],
-      answer: "The science and art of establishing, growing, and tending forests",
-    },
-    {
-      question: "Joint Forest Management in India mainly encourages",
-      options: [
-        "community participation in forest protection",
-        "private ownership of all forest land",
-        "complete ban on non-timber forest products",
-        "only industrial harvesting"
-      ],
-      answer: "community participation in forest protection",
-    },
-  ],
-  week1: [
-    {
-      question: "Which forest type is commonly associated with high rainfall in the Western Ghats?",
-      options: [
-        "Tropical evergreen forest",
-        "Tropical thorn forest",
-        "Temperate coniferous forest",
-        "Alpine scrub"
-      ],
-      answer: "Tropical evergreen forest",
-    },
-    {
-      question: "A working plan in forestry is primarily used for",
-      options: [
-        "scientific management of forest operations over time",
-        "daily weather forecasting",
-        "urban traffic control",
-        "mining lease approvals"
-      ],
-      answer: "scientific management of forest operations over time",
-    },
-  ],
-  week2: [],
-  week3: [],
-  week4: [],
-  week5: [],
-  week6: [],
-  week7: [],
-  week8: [],
-  week9: [],
-  week10: [],
-  week11: [],
-  week12: [],
-};
-
-export const introductionToLiberalArtsQuestionsByWeek: { [week: string]: Question[] } = {
-  week0: [
-    {
-      question: "The liberal arts tradition most strongly emphasizes",
-      options: [
-        "interdisciplinary learning and critical thinking",
-        "training for one narrow technical role only",
-        "memorizing facts without interpretation",
-        "avoiding ethical discussions"
-      ],
-      answer: "interdisciplinary learning and critical thinking",
-    },
-    {
-      question: "Which of these is commonly included in liberal arts education?",
-      options: [
-        "humanities, social sciences, and natural sciences",
-        "only mechanical workshop practice",
-        "only corporate law modules",
-        "only exam strategy sessions"
-      ],
-      answer: "humanities, social sciences, and natural sciences",
-    },
-  ],
-  week1: [
-    {
-      question: "In a liberal arts classroom, argumentation usually requires",
-      options: [
-        "evidence, reasoning, and clear communication",
-        "authority without justification",
-        "personal opinion alone",
-        "ignoring counterarguments"
-      ],
-      answer: "evidence, reasoning, and clear communication",
-    },
-    {
-      question: "A key outcome of liberal arts learning is",
-      options: [
-        "the ability to connect ideas across disciplines",
-        "complete specialization from day one",
-        "removal of creativity from analysis",
-        "replacing inquiry with rote learning"
-      ],
-      answer: "the ability to connect ideas across disciplines",
-    },
-  ],
+week12: [
+  {
+    question: "Captive breeding is an example of",
+    options: [
+      "in-situ conservation",
+      "ex-situ conservation",
+      "in-situ preservation",
+      "ex-situ preservation"
+    ],
+    answer: "ex-situ conservation",
+  },
+  {
+    question: "Biological control of pest populations is an example of",
+    options: [
+      "provisioning service",
+      "regulating service",
+      "supporting service",
+      "cultural service"
+    ],
+    answer: "regulating service",
+  },
+  {
+    question: "Zoo is an example of",
+    options: [
+      "in-situ conservation",
+      "ex-situ conservation",
+      "in-situ preservation",
+      "ex-situ preservation"
+    ],
+    answer: "ex-situ conservation",
+  },
+  {
+    question: "The elephant has a home range of several square kilometres, regulates the ecosystem by its habit of destructive feeding, and people can relate to this animal which is important for conservation. Given this background, the elephant can be called as",
+    options: [
+      "umbrella species",
+      "keystone species",
+      "flagship species",
+      "all of the above"
+    ],
+    answer: "all of the above",
+  },
+  {
+    question: "As per Wildlife Protection Act 1972 (WPA 1972), wild life includes any animal, aquatic or land vegetation which forms part of any _____ (fill in the blank)",
+    options: [
+      "ecosystem",
+      "state",
+      "country",
+      "habitat"
+    ],
+    answer: "habitat",
+  },
+  {
+    question: "The tiger has a home range of several square kilometres, regulates the ecosystem through controlling herbivore populations and trophic cascades, and people come to tiger reserves to watch tigers. Thus, the tiger can be called as",
+    options: [
+      "umbrella species",
+      "keystone species",
+      "flagship species",
+      "all of the above"
+    ],
+    answer: "all of the above",
+  },
+  {
+    question: "“the cost of impacts caused by emission of carbon dioxide” is known as",
+    options: [
+      "cost of carbon",
+      "economic cost of carbon",
+      "social cost of carbon",
+      "cultural cost of carbon"
+    ],
+    answer: "social cost of carbon",
+  },
+  {
+    question: "Soil formation is an example of",
+    options: [
+      "provisioning service",
+      "regulating service",
+      "supporting service",
+      "cultural service"
+    ],
+    answer: "supporting service",
+  },
+  {
+    question: "People come to Sessa orchid sanctuary in Arunachal Pradesh to witness orchids, which in this context would be classified as",
+    options: [
+      "umbrella species",
+      "keystone species",
+      "flagship species",
+      "extinct species"
+    ],
+    answer: "flagship species",
+  },
+  {
+    question: "Nutrient cycling is an example of",
+    options: [
+      "provisioning service",
+      "regulating service",
+      "supporting service",
+      "cultural service"
+    ],
+    answer: "supporting service",
+  },
+],
 };
