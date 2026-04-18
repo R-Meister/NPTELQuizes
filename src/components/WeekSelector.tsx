@@ -12,6 +12,8 @@ interface WeekSelectorProps {
 const WeekSelector: React.FC<WeekSelectorProps> = ({ weeks, basePath, backPath = "/", title }) => {
   const visibleWeeks = weeks.filter((w) => w !== "week69");
   const resolvedTitle = title ?? `Select a Week to ${basePath.includes("/quiz") ? "Take Test" : "Practice"}`;
+  const isQuizMode = basePath.includes("/quiz");
+  const showAllWeeks = isQuizMode || basePath.includes("/practice");
 
   return (
     <div className="text-gray-300 py-12 px-4 sm:px-6 lg:px-8 font-mono">
@@ -38,11 +40,12 @@ const WeekSelector: React.FC<WeekSelectorProps> = ({ weeks, basePath, backPath =
             </Link>
           ))}
 
-          {/* "All Weeks" link only in practice mode or quiz mode if desired */}
-          {basePath.includes("/quiz") && (
+          {showAllWeeks && (
             <Link
               href={`${basePath}/all`}
-              className="bg-blue-600 text-white p-4 hover:bg-blue-700 transition-colors duration-300 flex items-center justify-between"
+              className={`text-white p-4 transition-colors duration-300 flex items-center justify-between ${
+                isQuizMode ? "bg-blue-600 hover:bg-blue-700" : "bg-cyan-600 hover:bg-cyan-700"
+              }`}
             >
               <span className="flex items-center">
                 <Calendar className="mr-2" size={20} />

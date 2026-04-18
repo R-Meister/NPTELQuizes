@@ -16,10 +16,15 @@ export default function CoursePracticePage({ params }: { params: { course: strin
   useEffect(() => {
     if (!course) return;
 
-    const allQuestions =
+    const sourceQuestions =
       week === "all" ? Object.values(course.questionsByWeek).flat() : course.questionsByWeek[week] || [];
 
-    const shuffled = allQuestions.map((q) => ({
+    const orderedQuestions =
+      week === "all"
+        ? [...sourceQuestions].sort(() => Math.random() - 0.5)
+        : [...sourceQuestions];
+
+    const shuffled = orderedQuestions.map((q) => ({
       ...q,
       options: [...q.options].sort(() => Math.random() - 0.5),
     }));
@@ -161,6 +166,11 @@ export default function CoursePracticePage({ params }: { params: { course: strin
                 {selected && selected !== question.answer && (
                   <div className="mt-2 text-sm text-red-400">
                     Correct Answer: <span className="text-green-400">{question.answer}</span>
+                  </div>
+                )}
+                {selected && (
+                  <div className={`mt-2 text-sm ${selected === question.answer ? "text-green-400" : "text-red-400"}`}>
+                    {selected === question.answer ? "Correct" : "Incorrect"}
                   </div>
                 )}
               </div>
