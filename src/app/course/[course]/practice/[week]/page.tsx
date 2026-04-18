@@ -6,12 +6,21 @@ import { useEffect, useMemo, useState } from "react";
 import { getCourseBySlug } from "@/data/courses";
 import { Question } from "@/types/Question";
 
+const PRACTICE_RANDOMIZE_KEY = "practice-randomize-questions";
+
 export default function CoursePracticePage({ params }: { params: { course: string; week: string } }) {
   const course = useMemo(() => getCourseBySlug(params.course), [params.course]);
   const week = params.week;
 
   const [questions, setQuestions] = useState<Question[]>([]);
   const [userAnswers, setUserAnswers] = useState<{ [key: number]: string }>({});
+  const [randomizeQuestions, setRandomizeQuestions] = useState(false);
+
+  useEffect(() => {
+    const savedPreference = window.localStorage.getItem(PRACTICE_RANDOMIZE_KEY);
+    if (savedPreference === null) return;
+    setRandomizeQuestions(savedPreference === "true");
+  }, []);
 
   useEffect(() => {
     if (!course) return;
@@ -19,10 +28,9 @@ export default function CoursePracticePage({ params }: { params: { course: strin
     const sourceQuestions =
       week === "all" ? Object.values(course.questionsByWeek).flat() : course.questionsByWeek[week] || [];
 
-    const orderedQuestions =
-      week === "all"
-        ? [...sourceQuestions].sort(() => Math.random() - 0.5)
-        : [...sourceQuestions];
+    const orderedQuestions = randomizeQuestions
+      ? [...sourceQuestions].sort(() => Math.random() - 0.5)
+      : [...sourceQuestions];
 
     const shuffled = orderedQuestions.map((q) => ({
       ...q,
@@ -31,7 +39,15 @@ export default function CoursePracticePage({ params }: { params: { course: strin
 
     setQuestions(shuffled);
     setUserAnswers({});
-  }, [week, course]);
+  }, [week, course, randomizeQuestions]);
+
+  const toggleRandomize = () => {
+    setRandomizeQuestions((prev) => {
+      const next = !prev;
+      window.localStorage.setItem(PRACTICE_RANDOMIZE_KEY, String(next));
+      return next;
+    });
+  };
 
   const handleAnswer = (questionIndex: number, option: string) => {
     if (userAnswers[questionIndex]) return;
@@ -106,13 +122,26 @@ export default function CoursePracticePage({ params }: { params: { course: strin
           <h1 className="text-3xl font-bold mb-4 sm:mb-0 text-white">
             {week === "all" ? "All Weeks Practice" : `Week ${String(week).replace("week", "")} Practice`}
           </h1>
-          <Link
-            href={`/course/${course.slug}/practice`}
-            className="inline-flex items-center text-blue-400 hover:text-blue-300"
-          >
-            <ArrowLeft className="mr-2" size={20} />
-            Back to Week Selection
-          </Link>
+          <div className="flex items-center gap-4">
+            <button
+              type="button"
+              onClick={toggleRandomize}
+              className={`px-3 py-2 rounded border-2 text-sm transition-colors ${
+                randomizeQuestions
+                  ? "border-emerald-500 text-emerald-300 bg-emerald-900/30 hover:bg-emerald-900/40"
+                  : "border-gray-700 text-gray-300 hover:bg-gray-800"
+              }`}
+            >
+              Randomizer: {randomizeQuestions ? "On" : "Off"}
+            </button>
+            <Link
+              href={`/course/${course.slug}/practice`}
+              className="inline-flex items-center text-blue-400 hover:text-blue-300"
+            >
+              <ArrowLeft className="mr-2" size={20} />
+              Back to Week Selection
+            </Link>
+          </div>
         </div>
 
         {questions.map((question, index) => {
